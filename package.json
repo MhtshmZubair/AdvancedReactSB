@@ -3,22 +3,21 @@
   "version": "1.0.0",
   "description": "advanced-react",
   "main": "lib/server.js",
-  "repository": "https://github.com/jscomplete/ad                                               vanced-react",
+  "repository": "https://github.com/Mhtshm/AdvancedReactSB",
   "author": "Mhtshm",
   "license": "MIT",
   "jest": {
-    "testMatch": ["<rootDir>lib/__test__/**/*.{js}"]
-  },
+	"testMatch": ["**/__tests__/**/*.js"]
+    },
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --int                                               erpreter babel-node --name appDev",
+    "dev": "pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
     "webpack": "webpack -wd",
     "test": "jest"
   },
   "babel": {
     "presets": [
       "react",
-      ["env", { "targets": { "node": "current" }                                                }],
-      "stage-2"
+      ["env", { "targets": { "node": "current" }                                                }],"stage-2"
     ],
     "plugins": [
       "transform-class-properties",
