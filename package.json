@@ -7,18 +7,17 @@
   "author": "Mhtshm",
   "license": "MIT",
   "jest": {
-    "testMatch": ["**/__tests__/**/*.js"]
-  },
+	"testMatch": ["**/__tests__/**/*.js"]
+    },
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --int                                               erpreter babel-node --name appDev",
+    "dev": "pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
     "webpack": "webpack -wd",
     "test": "jest"
   },
   "babel": {
     "presets": [
       "react",
-      ["env", { "targets": { "node": "current" }                                                }],
-      "stage-2"
+      ["env", { "targets": { "node": "current" }                                                }],"stage-2"
     ],
     "plugins": [
       "transform-class-properties",
