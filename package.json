@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "babel": {
     "presets": [
