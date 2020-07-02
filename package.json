@@ -7,8 +7,10 @@
   "author": "Mhtshm",
   "license": "MIT",
   "jest": {
-	"testMatch": ["**/__tests__/**/*.js"]
-    },
+    "testMatch": [
+      "**/__tests__/**/*.js"
+    ]
+  },
   "scripts": {
     "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
@@ -22,8 +24,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "=4.18.2",
     "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
     "react-test-renderer": "^15.5.4"
@@ -42,4 +44,4 @@
     "react-dom": "^15.5.4",
     "webpack": "^2.5.0"
   }
- }
+}
