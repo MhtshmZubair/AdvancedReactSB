@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name pm2-app",
     "webpack": "webpack -wd",
     "test": "jest"
   },
@@ -24,13 +24,14 @@
     ]
   },
   "devDependencies": {
-    "eslint": "=4.18.2",
     "babel-eslint": "^7.2.3",
+    "eslint": "=4.18.2",
     "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
     "react-test-renderer": "^15.5.4"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-polyfill": "^6.23.0",
