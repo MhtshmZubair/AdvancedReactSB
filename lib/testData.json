@@ -1,7 +1,7 @@
 {
   "data": {
     "articles": [
-      {
+      { 
         "id": "95c12a8f6c88953ca8f8a39da25546e6",
         "title": "Introducing React's Error Code System",
         "date": "Mon Jul 11 2016 00:00:00 GMT+0000 (UTC)",
