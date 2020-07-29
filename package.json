@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name pm2-app",
     "webpack": "webpack -wd",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "babel": {
     "presets": [
