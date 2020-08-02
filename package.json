@@ -12,41 +12,53 @@
     ]
   },
   "scripts": {
-    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name pm2-app",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
     "webpack": "webpack -wd",
     "test": "jest"
   },
   "babel": {
     "presets": [
       "react",
-      "env",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
       "stage-2"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
     ]
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "enzyme": "^2.8.2",
-    "eslint": "=4.18.2",
-    "eslint-plugin-react": "^6.10.3",
-    "jest": "^19.0.2",
-    "react-test-renderer": "^15.5.4"
+    "enzyme": "^2.9.1",
+    "eslint": "^4.1.0",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "react-test-renderer": "^15.6.1"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.0",
     "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.4.0",
+    "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "ejs": "^2.5.6",
-    "express": "^4.15.2",
+    "express": "^4.15.3",
     "lodash.debounce": "^4.0.8",
     "lodash.pickby": "^4.6.0",
-    "pm2": "^2.4.6",
-    "prop-types": "^15.7.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "webpack": "^2.5.0"
+    "pm2": "^2.5.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-addons-perf": "^15.4.2",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.0.0"
   }
 }
